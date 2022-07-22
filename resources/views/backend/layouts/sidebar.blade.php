@@ -135,7 +135,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ URL :: to('/admin/carVersions') }}">
+                            <a href="{{ URL :: to('/admin/bikeVersions') }}">
                                 <i class="metismenu-icon"></i>
                                 Version
                             </a>

@@ -5,7 +5,7 @@
             <div class="col-md-6">
                 <div class="form-row">
                     <label for=""> Brand </label>
-                    <select name="brand" id="brand" class="form-control brand" required>
+                    <select name="brand" id="brand" class="form-control" required>
                         <option value="">Select Brand</option>
                         @foreach($brandLists as $brandList)
                         <option value="<?php echo $brandList->id; ?>"><?php echo $brandList->brand_name; ?></option>
@@ -31,8 +31,8 @@
                 <div class="form-row">
 
                     <label for=""> Version </label>
-                    <select name="version" id="yearpicker"  class="form-control version" required></select>
-                     <span id="error_version" class="has-error"></span>
+                    <select name="version" id="yearpicker" class="form-control version" required></select>
+                    <span id="error_version" class="has-error"></span>
 
 
                 </div>
@@ -54,13 +54,12 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-     
+
         let startYear = 2000;
-    let endYear = new Date().getFullYear();
-    for (i = endYear; i > startYear; i--)
-    {
-      $('#yearpicker').append($('<option />').val(i).html(i));
-    }
+        let endYear = new Date().getFullYear();
+        for (i = endYear; i > startYear; i--) {
+            $('#yearpicker').append($('<option />').val(i).html(i));
+        }
 
         $('#create').validate({ // <- attach '.validate()' to your form
             // Rules for form validation
@@ -102,8 +101,8 @@
 
 
                 swal({
-                    title: "Confirm to Submit Car Model",
-                    text: "Add Car Model",
+                    title: "Confirm to Submit Bike Model",
+                    text: "Add Bike Model",
                     type: "warning",
                     showCancelButton: true,
                     closeOnConfirm: false,
@@ -113,7 +112,7 @@
                 }, function() {
 
                     $.ajax({
-                        url: 'carVersions',
+                        url: 'bikeVersions',
                         type: 'POST',
                         data: myData,
                         dataType: 'json',
@@ -158,7 +157,7 @@
 
             $(".model").html('');
             $.ajax({
-                url: "{{url('admin/allCarModelsByBrandId')}}",
+                url: "{{url('admin/allBikeModelsByBrandId')}}",
                 type: "POST",
                 data: {
                     brand_id: idBrand,

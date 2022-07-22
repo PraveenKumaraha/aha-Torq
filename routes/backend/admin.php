@@ -37,6 +37,7 @@ Route::resource('bikeModels', 'Bike\Masters\BikeModelController');
 Route::get('/getAllBikeModels', 'Bike\Masters\BikeModelController@getAllBikeModels')->name('getAllBikeModels');
 
 Route::resource('bikeVersions','Bike\Masters\BikeVersionController');
+Route::get('/getAllBikeVersions', 'Bike\Masters\BikeVersionController@getAllBikeVersions')->name('getAllBikeVersions');
 
 
 

@@ -56,7 +56,7 @@
             table = $('#manage_all').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '/admin/getAllCarVersions',
+                ajax: '/admin/getAllBikeVersions',
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex'},       
                     {data: 'name', name: 'name'},
@@ -78,27 +78,27 @@
     </script>
     <script type="text/javascript">
         function create() {
-            ajax_submit_create('carVersions');
+            ajax_submit_create('bikeVersions');
         }
 
         $(document).ready(function () {
             // View Form
             $("#manage_all").on("click", ".view", function () {
                 var id = $(this).attr('id');
-                ajax_submit_view('carVersions', id)
+                ajax_submit_view('bikeVersions', id)
             });
 
             // Edit Form
             $("#manage_all").on("click", ".edit", function () {
                 var id = $(this).attr('id');
-                ajax_submit_edit('carVersions', id)
+                ajax_submit_edit('bikeVersions', id)
             });
 
 
             // Delete
             $("#manage_all").on("click", ".delete", function () {
                 var id = $(this).attr('id');
-                ajax_submit_delete('carVersions', id)
+                ajax_submit_delete('bikeVersions', id)
             });
 
         });
