@@ -101,6 +101,12 @@
                         Car Detail 
                     </a>
                 </li>
+                <li>
+                    <a href="{{ URL :: to('/admin/addCars') }}">
+                        <i class="metismenu-icon pe-7s-car"></i>
+                        Add Car
+                    </a>
+                </li>
                 <!-- <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-menu"></i>

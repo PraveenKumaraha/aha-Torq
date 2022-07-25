@@ -11,6 +11,8 @@
         Route::resource('carBrands', 'Car\Masters\CarBrandController');
         Route::get('/getAllCarBrands', 'Car\Masters\CarBrandController@getAllCarBrands')->name('getAllCarBrands');
 
+        Route::resource('addCars', 'Car\Masters\AddCarController');
+
         Route::resource('carModels', 'Car\Masters\CarModelController');
         Route::get('/getAllCarModels', 'Car\Masters\CarModelController@getAllCarModels')->name('getAllCarModels');
 
